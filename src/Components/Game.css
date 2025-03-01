@@ -1,0 +1,60 @@
+.game{
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.card {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    perspective: 100px;
+}
+
+.card.matched {
+    visibility: hidden;
+}
+
+.card-grid{
+    display: grid;
+    grid-template-columns:repeat(8, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.scoreboard{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.player-box {
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-box.active {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 102, 0, 0.5);
+    border: 2px solid white;
+}
+.game-over{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.game-over p {
+    margin-bottom: 10px;
+}
