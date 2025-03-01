@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <div class="container">
+        <h3>Update Details</h3>
+        <form method="POST" class="post-form" action="{% url 'update' employee.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- This renders the form fields -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Update</button>
+            </div>
+        </form>
+        <div>
+            <a href="{% url 'show' %}">Back to Employee List</a>
+        </div>
+    </div>
+</body>
+</html>

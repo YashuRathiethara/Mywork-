@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+<h1>Hello, <p style="color:blue">{{ message }}</p></h1>
+
+    <!-- Form to reload the page and call the Django view -->
+    <form method="get" action="/consume_flask_endpoint/">
+        <input type="hidden" name="trigger" value="true">
+        <button type="submit">Get Message</button>
+    </form>
+</body>
+</html>
